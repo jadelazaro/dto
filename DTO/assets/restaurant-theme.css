@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;600&display=swap');
+
+/* Restaurant-themed visual overrides for DTO — preserves content and layout */
+:root{
+  --dto-maroon: #6b1212;
+  --dto-amber: #b45309;
+  --dto-olive: #065f46;
+  --dto-bg: #fff8f2;
+}
+
+body{
+  font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: var(--dto-bg) !important;
+  color: #2b2b2b;
+}
+
+/* Headings use a classic serif to give a restaurant feel */
+h1,h2,h3,h4,h5{ font-family: 'Playfair Display', Georgia, serif; color: var(--dto-maroon); }
+
+/* Header styling */
+header{
+  background: linear-gradient(90deg, var(--dto-maroon) 0%, #7a1b1b 40%, rgba(180,83,9,0.95) 100%) !important;
+  color: #fff !important;
+}
+
+header .logo h1{ font-family: 'Playfair Display', serif; font-weight:700; color: #fff; }
+header img{ border-radius: 8px; }
+
+nav a{ color: rgba(255,255,255,0.95); }
+nav a:hover{ color: #fff7ed; text-decoration: underline; }
+
+/* Buttons: warm, rounded, restaurant style */
+.btn-restaurant, button, .rounded-lg{ border-radius: 12px; }
+.btn-restaurant{ background: linear-gradient(90deg,var(--dto-amber), #c76b14); color: white; padding: .6rem 1rem; border: none; box-shadow: 0 6px 18px rgba(180,83,9,0.18); }
+.btn-restaurant.secondary{ background: #fff; color: var(--dto-maroon); border: 1px solid rgba(107,18,18,0.06); }
+
+/* Cards */
+.card, .bg-white{ background: #fffaf6 !important; border: 1px solid rgba(107,18,18,0.06); box-shadow: 0 6px 20px rgba(107,18,18,0.04); }
+
+/* Sections get subtle textures and warm paddings */
+section{ padding: 2.25rem 0 !important; }
+.hero-accent{ background: linear-gradient(180deg, rgba(107,18,18,0.9), rgba(180,83,9,0.85)); }
+
+/* Footer */
+footer{ background: #2b2b2b !important; color: #f6f6f6 !important; }
+footer a{ color: #ffd9b3; }
+
+/* Small utilities */
+.accent-amber{ color: var(--dto-amber) !important; }
+.accent-maroon{ color: var(--dto-maroon) !important; }
+
+/* Ensure interactive elements remain accessible */
+a, button{ transition: all .18s ease-in-out; }
+
+/* Keep DTO logo colors consistent with theme */
+.dto-logo-tint{ filter: drop-shadow(0 6px 14px rgba(107,18,18,0.25)); }
+
+/* Make large hero headings elegant on small screens */
+@media (max-width: 768px){
+  h2.text-6xl{ font-size: 2.25rem !important; }
+}
