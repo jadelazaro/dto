@@ -84,7 +84,7 @@ CREATE TABLE IF NOT EXISTS activity_logs (
 
 -- Insert default admin user (username: admin, password: admin123)
 INSERT INTO users (username, email, password_hash, role) 
-VALUES ('admin', 'admin@dto.local', '$2y$10$NQ0dMwY8qCaQu0vR7mN1uenE7VYwQvHXnRNJ4v4c1qV5K2K5L8H3G', 'admin')
+VALUES ('admin', 'admin@dto.local', '$2y$10$2fVoxKJxAbDeM85eQdvjT.dMLtF7GV4HSzNvNThDJMK2N3ZhKjswq', 'admin')
 ON DUPLICATE KEY UPDATE password_hash=VALUES(password_hash);
 
 -- Create indexes for better performance
